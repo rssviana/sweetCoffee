@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Lato';
+    src: 
+        url('../fonts/Lato/Lato-Regular.ttf') format('truetype'),
+        url('../fonts/Lato/Lato-Bold.ttf') format('truetype'),
+        url('../fonts/Lato/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: 
+        url('../fonts/Lobster/Lobster-Regular.ttf')format('truetype');
+}
+
+html, body {
+    /* Adjust font size */
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* Font varient */
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    /* Smoothing */
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+html, body, h1, h2, h3, h4, h5, ul, li, a, p {
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero__video { 
+    background: url(../assets/images/bg-coffee.jpg) no-repeat;
+    background-size: cover; 
+    height: auto;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    width: auto;
+    z-index: -100;
+}
+
+.hero__content {
+    z-index: -99;
+    position: absolute;
+    background: rgba(0, 0, 0, .6);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.hero__menu {
+    background: #efeded;
+    border-bottom: 5px solid #edc30b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.hero__logo {
+    display: flex;
+    align-items: center
+}
+
+.hero__image{
+    width: 100px;
+    height: auto;
+    margin-right: 25px;
+}
+
+.hero__title {
+    color: #212121;
+    font: 3em 'Lobster';
+}
+
+.hero__list {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+}
+
+.hero__link {
+    border-bottom: 2px solid transparent;
+    color: #212121;
+    font-family: Lato;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.3em;
+    transition: all .2s ease-in-out;
+}
+
+.hero__link:hover {
+    border-bottom: 3px solid #edc30b;
+    transform: translateY(-3px);
+}
