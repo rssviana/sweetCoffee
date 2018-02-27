@@ -2,4 +2,5 @@
 Coffee shop web page. 
 
 Open on Google Chrome
-https://rssviana.github.io/sweetCoffee/pages/contato.html
+https://rssviana.github.io/sweetCoffee
+
