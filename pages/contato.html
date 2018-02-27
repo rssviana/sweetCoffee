@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sweet Coffee</title>
+    <link rel="icon" href="./assets/images/coffee-logo.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/catalogo.css">
+</head>
+<body>
+    <div class="container">
+        <div id="map" class="map">Mapa comes here
+        </div>
+        <form action="" class="form">
+            <fieldset class="form__field field" >
+                <legend class="field__title" >Entre em contato</legend>
+                <p class="field__lead">Endereço: Rua André Pinto , 87 bloco 65 apartamento 208, Ramos, Rio de Janeiro - Brasil</p>
+                <div class="field__data data">
+                    <p class="data__field">
+                        <label for="full-name" class="data__label">Nome</label>
+                        <input type="text" id="full-name" name="full_name" class="data__input" required aria-required="true">
+                    </p>
+                    <p class="data__field">
+                        <label for="email" class="data__label">Email</label>
+                        <input type="email" id="email" name="email" class="data__input" required aria-required="true">
+                    </p>
+                    <p class="data__field">
+                        <label for="message" class="data__label">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                    </p>
+                    <input class="data__button" type="button" name="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
