@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap
+}
+
+.map {
+    order: 1;
+    width: 50%;
+    height: 100%;
+}
+
+.form {
+    order: 2;
+    width: 50%;
+    height: 100%;
+}
