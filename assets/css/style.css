@@ -113,3 +113,25 @@ a {
     border-bottom: 3px solid #edc30b;
     transform: translateY(-3px);
 }
+
+
+/* page-Contatos */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.map {
+    background-color: #e2e2e2;
+    order: 1;
+    width: 50%;
+    height: 100vh;
+}
+
+.form {
+    order: 2;
+    width: 50%;
+    height: 100vh;
+}
