@@ -25,6 +25,7 @@ html, body {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px; 
+    background: #212121;
 }
 
 html, body, main, h1, h2, h3, h4, h5, ul, li, a, p {
@@ -83,13 +84,37 @@ tr:nth-child(even) {
 }
 
 .hero__content {
-    z-index: -99;
-    position: absolute;
     background: rgba(0, 0, 0, .6);
-    top: 0;
-    right: 0;
-    left: 0;
     bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -99;
+}
+.hero__toggle-menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 { opacity: 0; }
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .hero__menu {
@@ -99,6 +124,26 @@ tr:nth-child(even) {
     justify-content: space-between;
     align-items: center;
     padding: 5px 5%;
+    z-index: 999;
+    position: relative;
+}
+
+.hero__list {
+    background: #efeded;
+    display: flex;
+    flex-direction: row;
+}
+
+.hero__list li {
+    margin: 0 10px;
+}
+
+.hero__list li:first-child {
+    margin-left: 0;
+}
+
+.hero__list li:last-child {
+    margin-right: 0;
 }
 
 .hero__logo {
@@ -111,15 +156,9 @@ tr:nth-child(even) {
     margin-right: 15px;
 }
 
-.hero__title {
+.hero__title a {
     color: #212121;
     font: 2.1em 'Lobster';
-}
-
-.hero__list {
-    display: flex;
-    justify-content: space-between;
-    min-width: 300px;
 }
 
 .hero__link {
@@ -148,7 +187,7 @@ tr:nth-child(even) {
 
 .map {
     background-color: #e2e2e2;
-    height: 100vh;
+    height: calc(100vh - 58px);
     order: 1;
     width: 50%;
 }
@@ -165,7 +204,7 @@ tr:nth-child(even) {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafae5', endColorstr='#fafae5', GradientType=1 );
     box-sizing: border-box;
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 58px);
     justify-content: center;
     margin: 0;
     order: 2;
@@ -184,7 +223,7 @@ tr:nth-child(even) {
     display: flex;
     flex-direction: column;
     margin: 0;
-    max-width: 620px;
+    width: 460px;
     padding: 0; 
     text-align: center;
 }
@@ -254,7 +293,7 @@ tr:nth-child(even) {
     background-size: cover;
     display: flex;
     justify-content: space-around;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 58px);
     padding: 20px 0;
 }
 
@@ -347,5 +386,73 @@ tr:nth-child(even) {
     min-height: calc(100vh - 120px);
     padding: 20px 0;
 }
-.content__title {}
-.table {}
+.content__title {
+
+}
+.table {
+
+}
+
+.section:nth-child(even) {
+    position: relative;
+    background: #212121;
+    padding: 200px 0;
+    -webkit-transform: skew(0deg, -5deg);
+    transform: skew(0deg, -5deg);
+    margin-top: -70px;
+    z-index: 1;
+}
+
+.section:nth-child(odd) {
+    background: #FF9800;
+    padding: 250px 0;
+    -webkit-transform: skew(0deg, 8deg);
+    transform: skew(0deg, 8deg);
+    margin-top: -180px;
+}
+
+.section__content {
+    -webkit-transform: skew(0deg, 5deg);
+    transform: skew(0deg, 5deg);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    margin: 0 10%;
+
+}
+
+.section__content--odd {
+    -webkit-transform: skew(0deg, -8deg);
+    transform: skew(0deg, -8deg);
+    text-align: center; 
+    margin-top: 70px;
+    color: #212121;
+}
+.section__title{
+    min-width: 100%;
+    font: 3em 'Lobster';
+}
+
+.section__paragraph {
+    width: 40vw;
+    font: 1.2em 'Lato';
+    line-height: 1.5em;
+    text-align: justify;
+}
+.section__image {
+    width: 320px;
+    height: 250px;
+}
+
+@media (max-width: 720px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .form, .map {
+        width: 100%;
+        height: 100vh;
+    }
+}
