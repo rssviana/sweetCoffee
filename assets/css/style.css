@@ -387,10 +387,25 @@ tr:nth-child(even) {
     padding: 20px 0;
 }
 .content__title {
-
+    font: 3em 'Lobster';
 }
-.table {
+table, td, th {    
+    border: 1px solid #fff;
+    text-align: center;
+    font: 1.2em 'Lato';
+}
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table p {
+    font: .8em 'Lato';
+    line-height: 1.2em;
+}
+
+th, td {
+    padding: 15px 0;
 }
 
 .section:nth-child(even) {
